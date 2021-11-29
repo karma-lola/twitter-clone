@@ -1,4 +1,3 @@
-import NewTweetPage from "./NewTweetPage";
 import { useState, useEffect } from "react";
 import "./Tweets.css";
 
@@ -19,9 +18,6 @@ const Tweets = ({ token }) => {
   return (
     <div className="old-tweets">
       <h2>Home</h2>
-      <div>
-        <NewTweetPage />
-      </div>
       <div>
         {tweetsPost.map((tweet) => (
           <div className="tweet-box">

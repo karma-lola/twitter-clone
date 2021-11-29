@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./NewTweetPage.css";
+import { useNavigate } from "react-router-dom";
 
 const NewTweetPage = () => {
-
   const [title, setTitle] = useState("");
-  
   const [text, setText] = useState("");
+  const navigate = useNavigate();
 
   function post(e) {
     e.preventDefault();
@@ -22,7 +22,11 @@ const NewTweetPage = () => {
       }),
     })
       .then((response) => response.json())
-      .then((result) => console.log(result))
+      .then((result) => {
+        console.log(result);
+        navigate("/");
+      })
+
       .catch((error) => console.log("error", error));
   }
   return (

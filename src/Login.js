@@ -5,6 +5,7 @@ import "./Login.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   // const [token, setToken] = useState("");
+  const [password, setPassword] = useState("");
   // eslint-disable-next-line
   const token = sessionStorage.getItem("token");
   // eslint-disable-next-line
@@ -20,7 +21,7 @@ const Login = () => {
       },
       body: JSON.stringify({
         email: email,
-        password: "secure",
+        password: password,
       }),
     })
       .then((response) => response.json())
@@ -51,7 +52,12 @@ const Login = () => {
         </div>
         <div>
           <label>Password</label>
-          <input type="password" placeholder="Password" required />
+          <input
+            type="password"
+            placeholder="Password"
+            required
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
         <div>
           <button type="submit" onClick={loginHandle}>

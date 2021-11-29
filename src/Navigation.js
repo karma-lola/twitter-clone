@@ -14,12 +14,15 @@ const Navigation = () => {
       <Link className="navbar" to="/">
         Tweets
       </Link>
+      <Link className="navbar" to="/new-tweet-page">
+        New Tweet
+      </Link>
       {token && id ? (
-        <Link className="navbar" to="/Login">
+        <Link className="navbar" to="/login">
           Log In
         </Link>
       ) : (
-        <Link className="navbar" onClick={removeToken} to="/Login">
+        <Link className="navbar" onClick={removeToken} to="/login">
           Log Out
         </Link>
       )}
