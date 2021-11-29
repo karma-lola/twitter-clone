@@ -1,0 +1,16 @@
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #03a9f4;
+    margin: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
+nav a{
+    font-size: 1em;
+    color: aliceblue;
+    text-decoration: none;
+}
